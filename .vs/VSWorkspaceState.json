@@ -9,6 +9,6 @@
     "\\blog\\templates\\registration",
     "\\mysite"
   ],
-  "SelectedNode": "\\mysite\\urls.py",
+  "SelectedNode": "\\blog\\templates\\registration\\login.html",
   "PreviewInSolutionExplorer": false
 }
