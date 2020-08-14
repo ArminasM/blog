@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div style="align-content: center" id="loginbox">
+    <div style="align-content: center" class="infobox" id="login">
         {% if user.is_authenticated %}
         <p>
             You have already logged in.
@@ -29,19 +29,6 @@
             <input type="hidden" name="next" value="{{ next }}" />
         </form>
         {% endif %}
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 

@@ -4,6 +4,7 @@ from .models import Post, Comment
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from datetime import datetime, timedelta
 
 # Create your views here.
 def post_list(request):
@@ -68,3 +69,17 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+def contacts(request):
+    return render(request, 'blog/contacts.html')
+
+
+def stats(request):
+    week = Post.objects.filter(published_date__gte=timezone.now()-timedelta(days=7)).count()
+    month = Post.objects.filter(published_date__gte=timezone.now()-timedelta(days=30)).count()
+    total = Post.objects.filter(published_date__lte=timezone.now()).count()
+    if request.user.is_authenticated:
+        posted = Post.objects.filter(author = request.user, published_date__lte=timezone.now()).count()
+        return render(request, 'blog/stats.html',{'total': total, 'posted':posted, 'week':week, 'month':month})
+    else:
+        return render(request, 'blog/stats.html',{'total': total, 'week':week, 'month':month})

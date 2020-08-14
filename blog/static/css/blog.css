@@ -88,6 +88,13 @@ body {
 	margin: 40px 40px 0px 40px;
 }
 
+.content p{
+	color:white;
+}
+.content input, .content textarea {
+	color: black;
+}
+
 h1, h2, h3, h4 {
 	font-family: 'Lobster', cursive;
 	color: #ffffff;
@@ -119,10 +126,13 @@ h1, h2, h3, h4 {
 }
 
 .comment {
-	margin: 20px 0px 20px 20px;
+	margin: 20px 0px 20px 0px;
+	color: white;
 }
 
-#loginbox {
+
+
+.infobox {
 	background-color: aliceblue;
 	border: solid;
 	border-color: white;
@@ -136,34 +146,43 @@ h1, h2, h3, h4 {
 	border-radius: 5px;
 	color: white;
 }
-#loginbox p{
+
+.infobox p{
 	text-align: center;
 	margin: 0px 5px 0px 5px;
 }
 
-#loginbox h1 {
+.infobox h1 {
 	text-align: center;
 }
 
-#loginbox label {
+.infobox label {
 	color: aliceblue;
 	margin-right: 10px;
 	
 }
 
-#loginbox form{
+.infobox form{
 	margin: 10px 20px 10px 20px;
 	text-align: center;
 }
 
-#loginbox input{
+.infobox input{
 	margin-bottom: 10px;
 }
-	#loginbox input[type=submit] {
-		background-color: #09335e;
-		color: white;
-		margin: 8px;
-		border: solid;
-		border-radius: 5px;
-		cursor: pointer;
-	}
+
+.infobox input[type=submit] {
+	background-color: #09335e;
+	color: white;
+	margin: 8px;
+	border: solid;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#stats p {
+	margin-top: 20px;
+	font-size: 15pt;
+	font-style: oblique;
+	font-weight: bold;
+}

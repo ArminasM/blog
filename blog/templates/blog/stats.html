@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <div style="align-content: center" class="infobox" id="stats">
+        <p> New posts last week: {{week}}</p>
+        <p> New posts last 30 days: {{month}}</p>
+        <p> Total amount of posts: {{total}}</p>
+        {% if user.is_authenticated %}
+            <p>Posts made by {{user.username}}: {{posted}}</p>
+        {% endif %}
+    </div>
+
+
+
+
+
+
+
+  
+{% endblock %}
